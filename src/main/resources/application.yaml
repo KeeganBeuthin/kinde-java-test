@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: KindeSDKTest
+
+app:
+  kinde:
+    domain: ${KINDE_DOMAIN}
+    redirect-uri: ${KINDE_REDIRECT_URI:http://localhost:8080/callback}
+    client-id: ${KINDE_CLIENT_ID}
+    client-secret: ${KINDE_CLIENT_SECRET}
+    logout-redirect-uri: ${KINDE_LOGOUT_REDIRECT_URI}
