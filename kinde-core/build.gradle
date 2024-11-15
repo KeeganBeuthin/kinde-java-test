@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.nimbusds:oauth2-oidc-sdk:9.43.1'
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.31'
+    implementation 'com.google.inject:guice:5.1.0'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'org.projectlombok:lombok:1.18.26'
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'io.github.cdimascio:dotenv-java:2.3.2'
+    implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
+    
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation 'org.mockito:mockito-core:5.3.1'
+    testImplementation 'com.github.tomakehurst:wiremock-jre8:2.35.0'
+    
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+test {
+    useJUnitPlatform()
+}
